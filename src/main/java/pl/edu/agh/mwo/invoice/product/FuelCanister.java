@@ -20,7 +20,7 @@ public class FuelCanister extends Product {
         BigDecimal priceWithTax = price;
         // day of the carpenter discount
         if (now.getDayOfMonth() == DayOfCarpenterDay
-                && now.getMonth() == DayOfCarpenterMonth) {
+            && now.getMonth() == DayOfCarpenterMonth) {
             // nothing to do here, no tax
         } else {
             priceWithTax = price.multiply(taxPercent).add(price).add(excise);
